@@ -1,7 +1,7 @@
 ﻿using Kreta.Backend.Context;
 using Kreta.Backend.Repos.Base;
 using Kreta.Shared.Enums;
-using Kreta.Shared.Models;
+using Kreta.Shared.Models.SchoolCitizens;
 using Microsoft.EntityFrameworkCore;
 
 namespace Kreta.Backend.Repos

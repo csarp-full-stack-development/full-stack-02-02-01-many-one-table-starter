@@ -1,7 +1,7 @@
 ﻿using Kreta.HttpService.Base;
 using Kreta.Shared.Assemblers;
 using Kreta.Shared.Dtos;
-using Kreta.Shared.Models;
+using Kreta.Shared.Models.SchoolCitizens;
 using System.Net.Http.Json;
 
 namespace Kreta.HttpService

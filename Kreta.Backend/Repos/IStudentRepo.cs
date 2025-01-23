@@ -1,6 +1,6 @@
 ﻿using Kreta.Backend.Repos.Base;
 using Kreta.Shared.Enums;
-using Kreta.Shared.Models;
+using Kreta.Shared.Models.SchoolCitizens;
 
 namespace Kreta.Backend.Repos
 {

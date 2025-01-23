@@ -1,13 +1,13 @@
 ﻿using Kreta.Shared.Dtos;
-using Kreta.Shared.Models;
+using Kreta.Shared.Models.SchoolCitizens;
 
 namespace Kreta.Shared.Extensions
 {
     public static class StudentExtension
     {
-        public static Dtos.StudentDto ToStudentDto(this Models.Student student)
+        public static StudentDto ToStudentDto(this Student student)
         {
-            return new Dtos.StudentDto
+            return new StudentDto
             {
                 Id= student.Id,
                 FirstName = student.FirstName,
@@ -19,9 +19,9 @@ namespace Kreta.Shared.Extensions
             };
         }
 
-        public static Models.Student ToStudent(this Dtos.StudentDto studentdto) 
+        public static Student ToStudent(this Dtos.StudentDto studentdto) 
         {
-            return new Models.Student
+            return new Student
             {
                 Id = studentdto.Id,
                 FirstName = studentdto.FirstName,
