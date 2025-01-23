@@ -19,7 +19,7 @@ namespace Kreta.Shared.Extensions
             };
         }
 
-        public static Student ToStudent(this Dtos.StudentDto studentdto) 
+        public static Student ToStudent(this StudentDto studentdto) 
         {
             return new Student
             {
