@@ -30,6 +30,17 @@ namespace Kreta.Backend.Context
                     SchoolClass = SchoolClassType.ClassB,
                     EducationLevel="érettségi"
                 }
+                ,
+                new Student
+                {
+                    Id=Guid.NewGuid(),
+                    FirstName="Tanulós",
+                    LastName="Tamás",
+                    BirthsDay=new DateTime(2021,01,01),
+                    SchoolYear=10,
+                    SchoolClass = SchoolClassType.ClassB,
+                    EducationLevel="érettségi"
+                }
             };
 
             // Students

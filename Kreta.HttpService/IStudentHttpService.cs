@@ -5,5 +5,6 @@ namespace Kreta.HttpService
 {
     public interface IStudentHttpService : IBaseHttpService<Student>
     {
+        Task<int> GetNumberOfStudentAsync();
     }
 }

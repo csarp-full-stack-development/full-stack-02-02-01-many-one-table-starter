@@ -9,8 +9,8 @@ namespace Kreta.HttpService.Base
         where TModel : class, IDbEntity<TModel>, new()
         where TDto : class, new()
     {
-        private readonly HttpClient _httpClient;
-        private readonly Assambler<TModel, TDto> _assambler;
+        protected readonly HttpClient _httpClient;
+        protected readonly Assambler<TModel, TDto> _assambler;
 
         private string _apiName => typeof(TModel).Name;
 

@@ -45,6 +45,8 @@ namespace Kreta.Shared.Models
         public SchoolClassType SchoolClass { get; set; }
         public string EducationLevel { get; set; }
         public bool HasId => Id != Guid.Empty;
+        public bool IsWoman { get; set; }
+        public bool IsMan => !IsWoman;
 
         public override string ToString()
         {

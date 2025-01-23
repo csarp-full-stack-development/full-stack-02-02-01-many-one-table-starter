@@ -10,11 +10,18 @@ namespace Kreta.Backend.Controllers
     [ApiController]
     [Route("api/[controller]")]
     public partial class StudentController : BaseController<Student, StudentDto>
-    {
-        private IStudentRepo _studentRepo;
-        public StudentController(StudentAssembler? assambler, IStudentRepo? repo) : base(assambler, repo)
+    {        
+        private readonly IStudentRepo _studentRepo;
+        public StudentController(StudentAssembler? assambler, IStudentRepo? repo) : base(assambler, repo) 
         {
-            _studentRepo = repo ?? throw new ArgumentNullException(nameof(repo));
-        }       
+            _studentRepo = repo ?? throw new ArgumentException(nameof(repo));
+        }
+        
+        [HttpGet("NumberOfStudent")]
+        public async Task<IActionResult> GetNumberOfStudentAsync()
+        {
+            //int numberOfStudent = await _studentRepo.GetNumberOfStudentAsync();
+            return Ok(await _studentRepo.GetNumberOfStudentAsync());
+        }
     }
 }

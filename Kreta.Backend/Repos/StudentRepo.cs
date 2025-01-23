@@ -1,5 +1,4 @@
-﻿
-using Kreta.Backend.Context;
+﻿using Kreta.Backend.Context;
 using Kreta.Backend.Repos.Base;
 using Kreta.Shared.Enums;
 using Kreta.Shared.Models;
@@ -23,6 +22,11 @@ namespace Kreta.Backend.Repos
         {
             return await _dbSet!
                 .FindByCondition<Student>(s =>s.SchoolYear==schoolYear && s.SchoolClass==schoolClassType).ToListAsync();
+        }
+
+        public async Task<int> GetNumberOfStudentAsync()
+        {
+            return await _dbSet!.CountAsync();
         }
     }
 }
